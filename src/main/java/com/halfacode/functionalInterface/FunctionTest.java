@@ -17,6 +17,10 @@ public class FunctionTest {
         Function<Integer,Integer>  addBy1AndThenMultiBy10 =
                 incrementByOnFunction.andThen(MULTPLYbY10);
         System.out.println(addBy1AndThenMultiBy10.apply(4));
+        //BiFunction take two argument
+       // System.out.println(icrementByOneAndMultiBy(4,100));
+        System.out.println(icrementByOneAndMultiByfUNCTION.apply(4,100));
+
     }
 
   static   Function<Integer, Integer> incrementByOnFunction = number -> number + 1;
@@ -26,7 +30,8 @@ public class FunctionTest {
     Function<Integer,Integer>  addBy1AndThenMultiBy10 =
             incrementByOnFunction.andThen(MULTPLYbY10);
 
-  //  BiFunction<Integer,Integer,Integer> icrementByOneAndMultiByfUNCTION=
+    static BiFunction<Integer,Integer,Integer> icrementByOneAndMultiByfUNCTION=
+            (numberToIncrementByOne, numberToMultiBy) ->(numberToIncrementByOne +1) *numberToMultiBy;
 
 
     static int icrementByOneAndMultiBy(int number, int multiBlyBy){
